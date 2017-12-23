@@ -8,3 +8,6 @@ These are my dotfiles, used on Arch Linux.
   * xorg-xinit
   * xorg-server
   * bumblebee-status
+  * dunst
+  * polybar
+  * compton
