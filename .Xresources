@@ -1,6 +1,6 @@
-UXTerm*fontFaceOfzo     : Liberation Mono:size=10:antialias=true
-URxvt.font		: xft:Hack:size=9
-URxvt.scrollBar		: false
+!UXTerm*fontFaceOfzo     : Liberation Mono:size=10:antialias=true
+URxvt*font		: xft:Hack:size=9
+URxvt*scrollBar		: false
 
 ! special
 *.foreground:   #c5c8c6

@@ -42,16 +42,16 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
+#bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -110,9 +110,6 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-bindsym Control+1 workspace 1
-bindsym Control+2 workspace 2
-
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
@@ -160,25 +157,25 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-	id top-bar
-	position top
+#bar {
+#	id top-bar
+#	position top
 
-        status_command bumblebee-status -m spotify nic disk:root cpu memory time date pasink pasource github -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t solarized-powerline
-	
-	colors {
-		#colors			border	backgr.	text
-		active_workspace	#555555 #555555 #888888
-		focused_workspace	#859900	#859900	#000000
-	}
-}
+#        status_command bumblebee-status -m spotify nic disk:root cpu memory time date pasink pasource github -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t solarized-powerline
 
-#exec polybar main &
+#	colors {
+#		#colors			border	backgr.	text
+#		active_workspace	#555555 #555555 #888888
+#		focused_workspace	#859900	#859900	#000000
+#	}
+#}
 
-exec --no-startup-id dunst
-
-#exec compton -
+# Extra Stuff
+exec --no-startup-id polybar main &
+exec --no-startup-id compton -b
 
 # colors		border	backgr.	text	indicator
 client.focused		#002b36 #002b36 #eee8d5 #ababab
 client.unfocused	#000000 #000000 #ababab #000000
+
+bindsym $mod+l exec i3lock-fancy

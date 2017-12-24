@@ -1,3 +1,3 @@
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
-~/.fehbg &
+.config/startup.sh
 exec i3

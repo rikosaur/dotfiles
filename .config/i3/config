@@ -157,20 +157,22 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-	id top-bar
-	position top
+#bar {
+#	id top-bar
+#	position top
 
-        status_command bumblebee-status -m spotify nic disk:root cpu memory time date pasink pasource github -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t solarized-powerline
+#        status_command bumblebee-status -m spotify nic disk:root cpu memory time date pasink pasource github -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t solarized-powerline
 	
-	colors {
-		#colors			border	backgr.	text
-		active_workspace	#555555 #555555 #888888
-		focused_workspace	#859900	#859900	#000000
-	}
-}
+#	colors {
+#		#colors			border	backgr.	text
+#		active_workspace	#555555 #555555 #888888
+#		focused_workspace	#859900	#859900	#000000
+#	}
+#}
 
-#exec compton -
+exec --no-startup-id polybar main &
+
+exec --no-startup-id compton -b
 
 # colors		border	backgr.	text	indicator
 client.focused		#002b36 #002b36 #eee8d5 #ababab

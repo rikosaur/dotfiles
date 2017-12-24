@@ -8,21 +8,22 @@
 ;=====================================================
 
 [colors]
-background = ${xrdb:color0:#222}
-#background = #ababab
+background = #00000000
 background-alt = #444
-foreground = ${xrdb:color7:#222}
-#foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+foreground = #fff
+foreground-alt = #ff0
+primary = #fff
+secondary = #00ff00
+success = #00ae14
+warning = #a0ae00
+alert = #ca3f3f
+info = #0776aa
 
 [bar/main]
-;monitor = ${env:MONITOR:HDMI-1}
+enable-ipc = true
 ;monitor = ${env:MONITOR:LVDS-1}
 width = 100%
-height = 20
+height = 30
 offset-x = 0
 offset-y = 0
 radius = 0
@@ -38,19 +39,19 @@ border-size = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 4
 
-module-margin-left = 1
+module-margin-left = 3
 module-margin-right = 2
 
-font-0 = DejaVu Sans:size=10;2
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = FontAwesome:size=10;2
+font-0 = Open Sans Regular:size=10;2
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+;font-2 = siji:pixelsize=10;1
+font-1 = FontAwesome:size=10;3
 
 modules-left = i3 filesystem memory temperature cpu
 modules-center = xwindow
-modules-right = bspwm backlight-acpi battery volume xkeyboard eth wlan date powermenu
+modules-right = bspwm backlight-acpi battery volume eth wlan date
 
 tray-position = right
 tray-padding = 2
@@ -70,7 +71,7 @@ tray-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:200:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -167,8 +168,14 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
+format =  <label>
+label = %percentage%%
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
 
 bar-width = 10
 bar-indicator = |
@@ -207,22 +214,18 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected =  <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
+label-disconnected = No wifi
+ 
+format-disconnected = %{F#ca3f3f}%{F-} <label-disconnected>
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+;ramp-signal-0 = 
+;ramp-signal-1 = 
+;ramp-signal-2 = 
+;ramp-signal-3 = 
+;ramp-signal-4 = 
 
 [module/eth]
 type = internal/network
@@ -230,15 +233,13 @@ interface = enp4s0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.success}
 label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+ 
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${colors.alert}
+format-disconnected = No uplink
 
 [module/date]
 type = internal/date
@@ -259,30 +260,29 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
+format-volume = <ramp-volume> <label-volume>
+label-muted =  muted
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+;bar-volume-width = 10
+;bar-volume-foreground-0 = #55aa55
+;bar-volume-foreground-1 = #55aa55
+;bar-volume-foreground-2 = #55aa55
+;bar-volume-foreground-3 = #55aa55
+;bar-volume-foreground-4 = #55aa55
+;bar-volume-foreground-5 = #f5a70a
+;bar-volume-foreground-6 = #ff5555
+;bar-volume-gradient = false
+;bar-volume-indicator = |
+;bar-volume-indicator-font = 2
+;bar-volume-fill = ─
+;bar-volume-fill-font = 2
+;bar-volume-empty = ─
+;bar-volume-empty-font = 2
+;bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -290,26 +290,21 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
-
+format-full = %{F#00ae14}%{F-} 100%
+format-charging = %{F#0776aa}%{F-} <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
+ramp-capacity-0-foreground = ${colors.alert}
+ramp-capacity-1-foreground = ${colors.warning}
+ramp-capacity-2-foreground = ${colors.warning}
+ramp-capacity-3-foreground = ${colors.success}
+ramp-capacity-4-foreground = ${colors.success}
 
 [module/temperature]
 type = internal/temperature
