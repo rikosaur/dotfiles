@@ -7,7 +7,11 @@ These are my dotfiles, used on Arch Linux.
   * i3-gaps
   * xorg-xinit
   * xorg-server
-  * bumblebee-status
   * dunst
   * polybar
   * compton
+  * netctl
+  * urxvt
+  * vim (with Vundle)
+  * ttf-hack
+  * ttf-ms-fonts
