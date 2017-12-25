@@ -15,3 +15,5 @@ These are my dotfiles, used on Arch Linux.
   * vim (with Vundle)
   * ttf-hack
   * ttf-ms-fonts
+  * i3lock-fancy
+  * i3-dmenu-desktop
