@@ -47,7 +47,7 @@ module-margin-right = 2
 font-0 = Open Sans Regular:size=10;2
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
-font-1 = FontAwesome:size=10;3
+font-1 = FontAwesome:style=Regular:size=10;2
 
 modules-left = i3 filesystem memory cpu
 modules-center = xwindow
@@ -121,6 +121,7 @@ label-empty-padding = 2
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
+
 index-sort = true
 wrapping-scroll = false
 
@@ -199,12 +200,12 @@ interval = 2
 format-prefix = " "
 format = <label> <ramp-load>
 label = %percentage%%
-ramp-load-0 = 
-ramp-load-1 = 
-ramp-load-2 = 
-ramp-load-3 = 
-ramp-load-4 = 
-ramp-load-5 = 
+ramp-load-0 =
+ramp-load-1 =
+ramp-load-2 =
+ramp-load-3 =
+ramp-load-4 =
+ramp-load-5 =
 ramp-load-6 = 
 ramp-load-6-foreground = ${colors.warning}
 ramp-load-7 = 
@@ -225,7 +226,7 @@ format-connected =  <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
 label-disconnected = No wifi
- 
+
 format-disconnected = %{F#ca3f3f}%{F-} <label-disconnected>
 
 ;ramp-signal-0 = 
@@ -243,7 +244,7 @@ format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.success}
 label-connected = %local_ip%
- 
+
 format-disconnected-prefix = " "
 format-disconnected-prefix-foreground = ${colors.alert}
 format-disconnected = No uplink

@@ -14,6 +14,11 @@ feh --bg-scale 'pictures/city.jpg'
 # Keyboard
 xbindkeys &
 
+# append home to path
+PATH=$PATH:$HOME/bin
+
 # Others
 dunst &
 dropbox &
+google-drive-ocamlfuse /home/rik/google-drive &
+.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u --minimize &

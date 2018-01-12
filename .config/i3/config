@@ -16,9 +16,12 @@ new_window none
 
 set $mod Mod4
 
+for_window [class=".*"] title_format " %title"
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Hack 9
+#font pango:Hack 9
+font pango:Open Sans 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -127,7 +130,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you want to exit?' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -175,7 +178,7 @@ exec --no-startup-id polybar main &
 exec --no-startup-id compton -b
 
 # colors		border	backgr.	text	indicator
-client.focused		#002b36 #002b36 #eee8d5 #ababab
+client.focused		#1b1918 #1b1918 #eee8d5 #ababab
 client.unfocused	#000000 #000000 #ababab #000000
 
 bindsym $mod+l exec i3lock-fancy
