@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# Config Installer
+# Rik Brugman 2018
+
+# Files to work with
+CONFIGURATIONS=(
+	pictures/city.jpg
+	.bashrc
+	.bash_profile
+	bin
+	.fehbg
+	.gtkrc-2.0
+	.vimrc
+	.config/compton.conf
+	.config/dunst
+	.config/i3
+	.config/polybar
+	.config/powerline
+	.xinitrc
+	.Xresources
+)
+
+# Working Dir
+SOURCE_DIR=$(pwd)/src
+#WORKING_DIR=/home/$USER
+WORKING_DIR=/home/$USER/testconf
+
+# System Colors
+C_ERR="$( tput setaf 1 )"
+C_SUCCESS="$( tput setaf 2 )"
+C_WARNING="$( tput setaf 3 )"
+C_INFO="$( tput setaf 6 )"
+C_DEFAULT="$( tput sgr0 )"
+
+function create_symlink() {
+
+	SOURCE=$SOURCE_DIR/$1
+	DEST=$WORKING_DIR/$1
+
+	echo -e "  ➜ Copying $1..."
+
+	# file does not exist in repo
+	if [ ! -e $SOURCE ]; then
+		echo -e "    ${C_ERR}⨯ This file does not exist in source. Skipping...${C_DEFAULT}"
+		return
+	fi
+
+	# create dir if needed
+	if [ ! -d $(dirname $DEST) ]; then
+		mkdir $(dirname $DEST)
+	fi
+
+	# check if exists in destination and is not a symlink
+	if [[ -e $DEST || -L $DEST ]]; then
+		echo -e "    ${C_ERR}⨯ File or symlink already exists. Skipping...${C_DEFAULT}"
+		return;
+	fi
+
+	# link file
+	ln -s $SOURCE $DEST
+	echo -e "    ${C_SUCCESS}✓ File copied${C_DEFAULT}"
+}
+
+# make copies
+for file in "${CONFIGURATIONS[@]}"
+do
+	create_symlink $file
+done
+

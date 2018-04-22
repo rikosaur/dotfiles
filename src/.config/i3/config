@@ -125,6 +125,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+bindsym Print exec "maim -s | xclip -selection clipboard -t image/png"
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -174,7 +176,7 @@ bindsym $mod+r mode "resize"
 #}
 
 # Extra Stuff
-exec --no-startup-id polybar main &
+# exec --no-startup-id polybar main &
 exec --no-startup-id compton -b
 
 # colors		border	backgr.	text	indicator
@@ -182,3 +184,6 @@ client.focused		#1b1918 #1b1918 #eee8d5 #ababab
 client.unfocused	#000000 #000000 #ababab #000000
 
 bindsym $mod+l exec i3lock-fancy
+
+focus_follows_mouse no
+mouse_warping none

@@ -10,9 +10,10 @@ These are my dotfiles, used on Arch Linux.
   * dunst
   * polybar
   * compton
-  * netctl
-  * urxvt
+  * netctl-auto
+  * urxvt-unicode
   * vim (with Vundle)
+  * polybar
   * ttf-hack
   * ttf-ms-fonts
   * i3lock-fancy
