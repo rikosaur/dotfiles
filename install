@@ -23,8 +23,7 @@ CONFIGURATIONS=(
 
 # Working Dir
 SOURCE_DIR=$(pwd)/src
-#WORKING_DIR=/home/$USER
-WORKING_DIR=/home/$USER/testconf
+WORKING_DIR=/home/$USER
 
 # System Colors
 C_ERR="$( tput setaf 1 )"
