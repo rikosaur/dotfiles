@@ -18,7 +18,8 @@ xbindkeys &
 PATH=$PATH:$HOME/bin
 
 # Others
+bin/start-polybar
 dunst &
 dropbox &
 google-drive-ocamlfuse /home/rik/google-drive &
-.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u --minimize &
+# .local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u --minimize &

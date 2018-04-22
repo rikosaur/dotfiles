@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-scale' 'pictures/city.jpg' 
+'feh' '--bg-scale' '/home/rik/dotfiles/src/pictures/city.jpg' 
