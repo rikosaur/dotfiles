@@ -8,7 +8,9 @@ CONFIGURATIONS=(
 	pictures/city.jpg
 	.bashrc
 	.bash_profile
-	bin
+	bin/docker-status
+	bin/start-polybar
+	bin/startup.sh
 	.fehbg
 	.gtkrc-2.0
 	.vimrc
@@ -21,6 +23,7 @@ CONFIGURATIONS=(
 	.config/gtk-3.0
 	.xinitrc
 	.Xresources
+	.xbindkeysrc
 )
 
 # Working Dir
@@ -34,12 +37,20 @@ C_WARNING="$( tput setaf 3 )"
 C_INFO="$( tput setaf 6 )"
 C_DEFAULT="$( tput sgr0 )"
 
-function create_symlink() {
+# Others
+HOST=$(hostname)
 
+function create_symlink() {
 	SOURCE=$SOURCE_DIR/$1
 	DEST=$WORKING_DIR/$1
+	SERVING_TYPE='global'
 
-	echo -e "  ➜ Copying $1..."
+	if [ -e $SOURCE_DIR/$HOST/$1 ]; then
+		SOURCE=$SOURCE_DIR/$HOST/$1
+		SERVING_TYPE='specific'
+	fi
+
+	echo -e "  ➜ Copying $1 ($SERVING_TYPE)..."
 
 	# file does not exist in repo
 	if [ ! -e $SOURCE ]; then

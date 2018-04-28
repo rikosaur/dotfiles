@@ -3,12 +3,8 @@
 # Startup Commands
 # Rik Brugman 2017
 
-# Setup touchpad properties
-# Click-on-tap
-xinput set-prop 15 "libinput Tapping Enabled" 1
-
 # VGA/Graphics
-xrandr --output LVDS-1 --primary --auto --output HDMI-1-1 --auto --left-of LVDS-1
+xrandr --output HDMI-3 --primary --auto --output HDMI-4 --auto --right-of HDMI-3
 feh --bg-scale 'pictures/city.jpg'
 
 # Keyboard
@@ -22,4 +18,3 @@ bin/start-polybar
 dunst &
 dropbox &
 google-drive-ocamlfuse /home/rik/google-drive &
-# .local/share/JetBrains/Toolbox/bin/jetbrains-toolbox %u --minimize &
