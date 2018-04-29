@@ -51,21 +51,23 @@ font-2 = Font Awesome 5 Brands:style=Regular:size=10;2
 
 modules-left = i3 filesystem memory cpu docker-status
 modules-center = xwindow
-modules-right = bspwm volume eth date
+modules-right =  bspwm volume eth date
 
 tray-padding = 2
 
 [bar/main]
 inherit = global/barconfig
-monitor = ${env:MONITOR_PRIMARY:LVDS-1}
-
-tray-position = right
+monitor = HDMI-3
 
 [bar/secondary]
 inherit = global/barconfig
-monitor = ${env:MONITOR_SECONDARY:}
+monitor = HDMI-4
 
-tray-position = 
+tray-position = right
+modules-left = i3
+modules-right = spotify volume date
+
+#tray-position = 
 
 ;tray-transparent = true
 ;tray-background = #0063ff
@@ -83,7 +85,7 @@ tray-position =
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:200:...%
+label = %title:0:100:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -203,7 +205,7 @@ label = %percentage_used%%
 
 [module/eth]
 type = internal/network
-interface = enp4s0
+interface = eno1
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -232,7 +234,7 @@ format-underline = #0a6cf5
 label = %date% %time%
 
 [module/volume]
-type = internal/alsa
+type = internal/volume
 
 format-volume = <ramp-volume> <label-volume>
 label-muted =  muted
@@ -328,5 +330,13 @@ type=custom/script
 exec=~/bin/docker-status
 interval=2
 label= %output%
+
+[module/spotify]
+type = custom/script
+exec=~/bin/spotify-status
+interval = 1
+format-prefix=" "
+format = <label>
+
 
 ; vim:ft=dosini

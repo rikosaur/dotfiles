@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo -u rik killall polybar
 
-sudo -u rik DISPLAY=:0 MONITOR_PRIMARY=HDMI-3 /usr/bin/polybar main &
-sudo -u rik DISPLAY=:0 MONITOR_SECONDARY=HDMI-4 /usr/bin/polybar secondary &
+DISPLAY=:0 MONITOR_PRIMARY=HDMI-3 /usr/bin/polybar main &
+DISPLAY=:0 MONITOR_SECONDARY=HDMI-4 /usr/bin/polybar secondary &
