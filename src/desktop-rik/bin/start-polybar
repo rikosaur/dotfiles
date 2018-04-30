@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DISPLAY=:0 MONITOR_PRIMARY=HDMI-3 /usr/bin/polybar main &
+DISPLAY=:0 MONITOR_SECONDARY=HDMI-4 /usr/bin/polybar secondary &
