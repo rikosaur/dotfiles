@@ -2,11 +2,11 @@
 
 HDMI_STATUS=$(</sys/class/drm/card1/card1-HDMI-A-1/status)
 
-sudo -u rik killall polybar
+#sudo -u rik killall polybar
 
 if [ "connected" == "$HDMI_STATUS" ]; then
-	sudo -u rik DISPLAY=:0 MONITOR_PRIMARY=HDMI-1-1 /usr/bin/polybar main &
-	sudo -u rik DISPLAY=:0 MONITOR_SECONDARY=LVDS-1 /usr/bin/polybar secondary &
+	DISPLAY=:0 MONITOR_PRIMARY=HDMI-1-1 /usr/bin/polybar main &
+	DISPLAY=:0 MONITOR_SECONDARY=LVDS-1 /usr/bin/polybar secondary &
 else
-	sudo -u rik DISPLAY=:0 MONITOR_PRIMARY=LVDS-1 /usr/bin/polybar main &
+	DISPLAY=:0 MONITOR_PRIMARY=LVDS-1 /usr/bin/polybar main &
 fi

@@ -59,6 +59,8 @@ tray-padding = 2
 inherit = global/barconfig
 monitor = ${env:MONITOR_PRIMARY:LVDS-1}
 
+modules-right = spotify backlight-acpi battery volume eth wlan date
+
 tray-position = right
 
 [bar/secondary]
@@ -396,5 +398,12 @@ type=custom/script
 exec=~/bin/docker-status
 interval=2
 label= %output%
+
+[module/spotify]
+type = custom/script
+exec = bin/spotify-status
+interval = .5
+format-prefix=" "
+format = <label>
 
 ; vim:ft=dosini
