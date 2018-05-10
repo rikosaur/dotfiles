@@ -4,7 +4,7 @@
 # Rik Brugman 2017
 
 # VGA/Graphics
-xrandr --output HDMI-3 --primary --auto --output HDMI-4 --auto --right-of HDMI-3
+xrandr --output LVDS-1 --primary --auto --output HDMI-1-1 --auto --right-of LVDS-1
 feh --bg-scale 'pictures/city.jpg'
 
 # Keyboard
