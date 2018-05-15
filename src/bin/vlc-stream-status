@@ -1,0 +1,15 @@
+#!/bin/bash
+if [[ $(playerctl -l) != *"vlc"* ]]; then
+  echo ""
+  exit
+fi
+
+if [ "$(playerctl -l 2>&1)" = "No players were found" ]; then
+  echo ""
+elif [ "$(playerctl -p spotify status)" = "Playing" ]; then
+  title=`exec playerctl metadata xesam:title`
+  artist=`exec playerctl metadata xesam:artist`
+  echo " $title - $artist"
+else
+  echo ""
+fi

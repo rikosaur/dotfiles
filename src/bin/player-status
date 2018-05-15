@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# no players found. Stop!
+if [ "$(playerctl -l 2>&1)" = "No players were found" ]; then
+  echo ""
+  exit
+fi
+
+# Spotify
+if [ "$(playerctl -p spotify status)" = "Playing" ]; then
+  title=`exec playerctl -p spotify metadata xesam:title`
+  artist=`exec playerctl -p spotify metadata xesam:artist`
+  echo " $title - $artist"
+
+# VLC radio stream
+elif [ "$(playerctl -p vlc status)" = "Playing" ]; then
+  title=`exec playerctl -p vlc metadata xesam:title`
+  artist=`exec playerctl -p vlc metadata vlc:nowplaying`
+  echo " $title - $artist"
+
+else
+  echo ""
+fi

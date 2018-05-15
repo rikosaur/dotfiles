@@ -48,6 +48,7 @@ font-0 = Open Sans Regular:size=10;2
 ;font-2 = siji:pixelsize=10;1
 font-1 = FontAwesome:style=Regular:size=10;2
 font-2 = Font Awesome 5 Brands:style=Regular:size=10;2
+font-3 = Font Awesome 5 Free:style=Solid:size=10;2
 
 modules-left = i3 filesystem memory cpu docker-status
 modules-center = xwindow
@@ -59,7 +60,7 @@ tray-padding = 2
 inherit = global/barconfig
 monitor = ${env:MONITOR_PRIMARY:LVDS-1}
 
-modules-right = spotify backlight-acpi battery volume eth wlan date
+modules-right = player-status backlight-acpi battery volume eth wlan date
 
 tray-position = right
 
@@ -399,11 +400,11 @@ exec=~/bin/docker-status
 interval=2
 label= %output%
 
-[module/spotify]
+[module/player-status]
 type = custom/script
-exec = bin/spotify-status
+exec = bin/player-status
 interval = .5
 format-prefix=" "
-format = <label>
+format = <label> 
 
 ; vim:ft=dosini

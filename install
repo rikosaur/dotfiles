@@ -8,7 +8,7 @@ CONFIGURATIONS=(
 	pictures/city.jpg
 	.bashrc
 	.bash_profile
-	bin/spotify-status
+	bin/player-status
 	bin/docker-status
 	bin/start-polybar
 	bin/startup.sh
