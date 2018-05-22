@@ -17,4 +17,3 @@ PATH=$PATH:$HOME/bin
 bin/start-polybar
 dunst &
 dropbox &
-google-drive-ocamlfuse /home/rik/google-drive &
