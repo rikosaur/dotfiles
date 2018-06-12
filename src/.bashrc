@@ -14,6 +14,7 @@ alias gd='git diff'
 alias ga='git add'
 alias gs='git status'
 alias bd='bin/console'
+alias doei='shutdown now'
 
 # make tail -f colored
 tailf-color () {
