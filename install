@@ -20,7 +20,6 @@ CONFIGURATIONS=(
 	.config/i3
 	.config/polybar
 	.config/powerline
-	.config/gtk-2.0
 	.config/gtk-3.0
 	.xinitrc
 	.Xresources
