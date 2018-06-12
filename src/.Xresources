@@ -18,10 +18,10 @@ URxvt*shading               	: 20
 
 ! red
 *.color1:       #910000
-*.color9:       #910000
+*.color9:       #f22c40
 
 ! green
-*.color2:       #5ab738
+*.color2:       #288B04
 *.color10:      #5ab738
 
 ! yellow
