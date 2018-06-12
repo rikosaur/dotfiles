@@ -1,4 +1,4 @@
-#  .files
+# .files
 
 These are my dotfiles, used on Arch Linux.
 
