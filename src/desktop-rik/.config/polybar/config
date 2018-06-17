@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-background = #00000000
+background = #61000000
 background-alt = #444
 foreground = #fff
 foreground-alt = #ff0
@@ -70,8 +70,8 @@ modules-right = player volume date
 
 #tray-position = 
 
-;tray-transparent = true
-;tray-background = #0063ff
+tray-transparent = false
+tray-background = #b2000000
 
 ;wm-restack = bspwm
 ;wm-restack = i3
