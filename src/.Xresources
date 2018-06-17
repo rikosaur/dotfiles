@@ -1,4 +1,4 @@
-URxvt*font			: xft:Hack Nerd Font Mono:size=9:antialias=true
+URxvt*font			: xft:Hack:style=Regular:size=9:antialias=true
 URxvt*scrollBar		        : false
 URxvt*internalBorder        	: 10
 URxvt*keysym*Shift-Control-V	: perl:clipboard:paste
