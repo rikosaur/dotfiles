@@ -5,7 +5,7 @@
 
 # Files to work with
 CONFIGURATIONS=(
-	pictures/city.jpg
+	pictures/no-signal.jpg
 	.bashrc
 	.bash_profile
 	bin/player-status

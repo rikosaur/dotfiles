@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-background = #00000000
+background = #61000000
 background-alt = #444
 foreground = #fff
 foreground-alt = #ff0
@@ -63,6 +63,8 @@ monitor = ${env:MONITOR_PRIMARY:LVDS-1}
 modules-right = player-status backlight-acpi battery volume eth wlan date
 
 tray-position = right
+tray-transparent = false
+tray-background = #b2000000
 
 [bar/secondary]
 inherit = global/barconfig
