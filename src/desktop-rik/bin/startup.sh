@@ -5,7 +5,7 @@
 
 # VGA/Graphics
 xrandr --output HDMI-3 --primary --auto --output HDMI-4 --auto --right-of HDMI-3
-feh --bg-scale 'pictures/city.jpg'
+feh --bg-scale 'pictures/background.jpg'
 
 # Keyboard
 xbindkeys &
