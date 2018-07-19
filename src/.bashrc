@@ -9,7 +9,7 @@ fi
 # setup aliases
 alias ll='ls -lah --color=auto'
 alias ls='ls --color=auto'
-alias gc='git commit -S'
+alias gc='git commit'
 alias gd='git diff'
 alias ga='git add'
 alias gs='git status'
@@ -39,3 +39,5 @@ if [ -f '/home/rik/google-cloud-sdk/path.bash.inc' ]; then source '/home/rik/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/rik/google-cloud-sdk/completion.bash.inc' ]; then source '/home/rik/google-cloud-sdk/completion.bash.inc'; fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
