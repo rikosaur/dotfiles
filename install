@@ -78,4 +78,3 @@ for file in "${CONFIGURATIONS[@]}"
 do
 	create_symlink $file
 done
-
