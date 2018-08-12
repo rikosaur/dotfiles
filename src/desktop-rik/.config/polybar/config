@@ -58,11 +58,11 @@ tray-padding = 2
 
 [bar/main]
 inherit = global/barconfig
-monitor = HDMI-3
+monitor = HDMI-0
 
 [bar/secondary]
 inherit = global/barconfig
-monitor = HDMI-4
+monitor = HDMI-1
 
 tray-position = right
 modules-left = i3
