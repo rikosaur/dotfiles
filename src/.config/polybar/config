@@ -58,7 +58,7 @@ tray-padding = 2
 
 [bar/main]
 inherit = global/barconfig
-monitor = ${env:MONITOR_PRIMARY:LVDS-1}
+monitor = ${env:MONITOR_PRIMARY:LVDS-1-1}
 
 modules-right = player-status backlight-acpi battery volume eth wlan date
 
