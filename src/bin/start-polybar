@@ -1,12 +1,12 @@
 #!/bin/bash
 
-HDMI_STATUS=$(</sys/class/drm/card1/card1-HDMI-A-1/status)
+HDMI_STATUS=$(</sys/class/drm/card0/card0-HDMI-A-1/status)
 
 #sudo -u rik killall polybar
 
 if [ "connected" == "$HDMI_STATUS" ]; then
-	DISPLAY=:0 MONITOR_PRIMARY=HDMI-1-1 /usr/bin/polybar main &
-	DISPLAY=:0 MONITOR_SECONDARY=LVDS-1 /usr/bin/polybar secondary &
+	DISPLAY=:0 MONITOR_PRIMARY=HDMI-0 /usr/bin/polybar main &
+	DISPLAY=:0 MONITOR_SECONDARY=LVDS-1-1 /usr/bin/polybar secondary &
 else
-	DISPLAY=:0 MONITOR_PRIMARY=LVDS-1 /usr/bin/polybar main &
+	DISPLAY=:0 MONITOR_PRIMARY=LVDS-1-1 /usr/bin/polybar main &
 fi
