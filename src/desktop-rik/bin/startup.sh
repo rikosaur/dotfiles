@@ -13,6 +13,9 @@ xbindkeys &
 # append home to path
 PATH=$PATH:$HOME/bin
 
+# USB automount software
+udiskie --try -aF &
+
 # Others
 bin/start-polybar
 dunst &
