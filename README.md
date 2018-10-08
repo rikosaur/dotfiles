@@ -18,3 +18,5 @@ These are my dotfiles, used on Arch Linux.
   * ttf-ms-fonts
   * i3lock-fancy
   * i3-dmenu-desktop
+  * ttf-roboto
+  * adobe-source-code-pro-fonts
