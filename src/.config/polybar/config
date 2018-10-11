@@ -123,18 +123,18 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 4
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 4
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 4
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 4
 
 [module/i3]
 type = internal/i3
@@ -243,9 +243,9 @@ interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
-label-disconnected = No wifi
+label-disconnected = no wifi
 
-format-disconnected = %{F#ca3f3f}來%{F-} <label-disconnected>
+format-disconnected = 來 <label-disconnected>
 
 ramp-signal-0 = 冷 
 ramp-signal-1 = 爛
@@ -260,12 +260,12 @@ interval = 3.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.success}
+format-connected-prefix-foreground = ${colors.primary}
 label-connected = %local_ip%
 
 format-disconnected-prefix = " "
-format-disconnected-prefix-foreground = ${colors.alert}
-format-disconnected = No uplink
+format-disconnected-prefix-foreground = ${colors.primary}
+format-disconnected = 
 
 [module/date]
 type = internal/date
@@ -316,8 +316,8 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-full = %{F#00ae14}%{F-} 100%
-format-charging = %{F#0776aa}%{F-} <label-charging>
+format-full =  100%
+format-charging =  <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 
 ramp-capacity-0 = 
@@ -328,9 +328,9 @@ ramp-capacity-4 = 
 
 ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1-foreground = ${colors.warning}
-ramp-capacity-2-foreground = ${colors.warning}
-ramp-capacity-3-foreground = ${colors.success}
-ramp-capacity-4-foreground = ${colors.success}
+ramp-capacity-2-foreground = ${colors.primary}
+ramp-capacity-3-foreground = ${colors.primary}
+ramp-capacity-4-foreground = ${colors.primary}
 
 [module/temperature]
 type = internal/temperature
