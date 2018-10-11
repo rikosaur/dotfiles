@@ -19,11 +19,11 @@ URxvt*blurRadius		: 10
 *.color8:       #766e6b
 
 ! red
-*.color1:       #910000
+*.color1:       #d62323
 *.color9:       #f22c40
 
 ! green
-*.color2:       #288B04
+*.color2:       #afd700 
 *.color10:      #5ab738
 
 ! yellow
