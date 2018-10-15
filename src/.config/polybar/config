@@ -317,7 +317,7 @@ adapter = AC
 full-at = 98
 
 format-full =  100%
-format-charging =  <label-charging>
+format-charging =  <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 
 ramp-capacity-0 = 
