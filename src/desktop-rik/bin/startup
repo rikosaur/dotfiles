@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Startup Commands
 # Rik Brugman 2017
@@ -16,7 +16,10 @@ PATH=$PATH:$HOME/bin
 # USB automount software
 udiskie --try -aF &
 
+# Polybar instances
+DISPLAY=:0 MONITOR_PRIMARY=HDMI-3 /usr/bin/polybar main &
+DISPLAY=:0 MONITOR_SECONDARY=HDMI-4 /usr/bin/polybar secondary &
+
 # Others
-bin/start-polybar
 dunst &
 dropbox &

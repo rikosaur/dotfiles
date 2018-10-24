@@ -1,14 +1,19 @@
-URxvt*font			: xft:Source Code Pro:style=Bold:size=10:antialias=true
-URxvt*scrollBar		        : false
-URxvt*internalBorder        	: 10
-URxvt*keysym*Shift-Control-V	: perl:clipboard:paste
-URxvt*iso14755              	: false
-URxvt*perl-ext-common       	: default,clipboard
-URxvt*perl-ext			: url-select
-URxvt*transparent           	: true
-URxvt*shading               	: 35
-URxvt*blurRadius		: 10
+! Xresouces file
+! @author Rik Brugman
 
+! URxvt settings
+URxvt*font                     : xft:Source Code Pro:style=Bold:size=10:antialias=true
+URxvt*scrollBar                : false
+URxvt*internalBorder           : 10
+URxvt*keysym*Shift-Control-V   : perl:clipboard:paste
+URxvt*iso14755                 : false
+URxvt*perl-ext-common          : default,clipboard
+URxvt*perl-ext                 : url-select
+URxvt*transparent              : true
+URxvt*shading                  : 35
+URxvt*blurRadius               : 10
+
+! Global Terminal Colors
 ! special
 *.foreground:   #a8a19f
 *.background:   #1b1918
@@ -23,7 +28,7 @@ URxvt*blurRadius		: 10
 *.color9:       #f22c40
 
 ! green
-*.color2:       #afd700 
+*.color2:       #afd700
 *.color10:      #5ab738
 
 ! yellow

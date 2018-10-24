@@ -183,7 +183,7 @@ bindsym $mod+r mode "resize"
 
 # Extra Stuff
 exec --no-startup-id compton -b
-exec --no-startup-id /home/rik/bin/startup.sh
+exec --no-startup-id /home/rik/bin/startup
 
 # colors		border	backgr.	text	indicator
 client.focused		#1b1918 #1b1918 #eee8d5 #ababab

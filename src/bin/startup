@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Startup Commands
 # Rik Brugman 2017
@@ -19,7 +19,15 @@ PATH=$PATH:$HOME/bin
 # start USB automount software
 udiskie --tray -aF &
 
+# Polybar instances
+HDMI_STATUS=$(</sys/class/drm/card0/card0-HDMI-A-1/status)
+if [ "connected" == "$HDMI_STATUS" ]; then
+	DISPLAY=:0 MONITOR_PRIMARY=HDMI-0 /usr/bin/polybar main &
+	DISPLAY=:0 MONITOR_SECONDARY=LVDS-1-1 /usr/bin/polybar secondary &
+else
+	DISPLAY=:0 MONITOR_PRIMARY=LVDS-1-1 /usr/bin/polybar main &
+fi
+
 # Others
-bin/start-polybar
 dunst &
 dropbox &

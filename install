@@ -10,14 +10,15 @@ CONFIGURATIONS=(
 	.bash_profile
 	bin/player-status
 	bin/docker-status
-	bin/start-polybar
-	bin/startup.sh
+	bin/vlc-stream-status
+	bin/startup
 	.gtkrc-2.0
 	.vimrc
 	.config/compton.conf
 	.config/dunst
 	.config/i3
-	.config/polybar
+	.config/polybar/config
+	.config/polybar/globalConfig
 	.config/powerline
 	.config/gtk-3.0
 	.xinitrc
