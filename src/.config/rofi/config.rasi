@@ -1,0 +1,5 @@
+configuration {
+	theme: "sidetab";
+  modi:  "drun,run,window";
+  m:     "-1";
+}

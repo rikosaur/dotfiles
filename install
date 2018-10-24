@@ -21,6 +21,7 @@ CONFIGURATIONS=(
 	.config/polybar/globalConfig
 	.config/powerline
 	.config/gtk-3.0
+	.config/rofi
 	.xinitrc
 	.Xresources
 	.xbindkeysrc
