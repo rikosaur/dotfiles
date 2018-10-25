@@ -161,6 +161,16 @@ ramp-capacity-2-foreground = ${colors.primary}
 ramp-capacity-3-foreground = ${colors.primary}
 ramp-capacity-4-foreground = ${colors.primary}
 
+[module/xbacklight]
+type = internal/xbacklight
+format =  <label>
+label = %percentage%%
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
 [module/date]
 type = internal/date
 interval = 5
@@ -184,7 +194,7 @@ exec = ~/bin/docker-status
 interval = 2
 label =  %output%
 
-[module/player]
+[module/player-status]
 type = custom/script
 exec = ~/bin/player-status
 interval = 1
