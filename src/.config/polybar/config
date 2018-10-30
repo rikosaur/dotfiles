@@ -4,7 +4,7 @@
 ; Local settings for specific setup
 ; Will be used in the global bar config file
 [local-settings]
-eth-interface = eno1
+eth-interface = enp4s0
 wlan-interface = wlp3s0
 battery-id = BAT0
 adapter-id = AC
