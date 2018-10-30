@@ -12,7 +12,7 @@ configuration {
 }
 
 * {
-	background-color:            #08080870;
+	background-color:            #08080855;
 	text-color:                  #d3d7cf;
 	selbg:                       #215d9c;
 	actbg:                       #262626;
@@ -40,7 +40,7 @@ configuration {
 	hide-scrollbar:              "true";
 	margin:                      0;
 	padding:                     0;
-  font:                        "Roboto Regular 12";
+	font:                        "Roboto Regular 12";
 }
 
 window {
