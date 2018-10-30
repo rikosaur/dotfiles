@@ -4,8 +4,8 @@
 [colors]
 background      = #61000000
 background-alt  = #0D3E58
-foreground      = #ffffff
-foreground-alt  = #ff0
+foreground      = #cfcccccc
+foreground-alt  = #88cccccc
 primary         = #ffffff
 secondary       = #00ff00
 success         = #00ae14
@@ -30,12 +30,12 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 padding-left = 0
 padding-right = 4
-module-margin-left = 3
-module-margin-right = 2
-font-0 = Roboto:style=Regular:size=10;2
-font-1 = FontAwesome:style=Regular:size=10;2
+module-margin-left = 4
+module-margin-right = 3
+font-0 = Asap Semibold:style=Semibold:size=10;2
+font-1 = FontAwesome:style=Regular:size=11;3
 font-2 = Font Awesome 5 Brands:style=Regular:size=10;2
-font-3 = Font Awesome 5 Free:style=Solid:size=10;2
+font-3 = Font Awesome 5 Free:style=Solid:size=10;3
 modules-left = i3 filesystem memory cpu docker-status
 modules-center = xwindow
 modules-right =  volume eth date
@@ -56,7 +56,7 @@ label = %title:0:100:...%
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted =  %used% / %total%
+label-mounted =   %used% / %total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -96,8 +96,8 @@ label-urgent-padding = 4
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format = <label> <ramp-load>
+format-prefix = "  "
+format = <label><ramp-load>
 label = %percentage%%
 ramp-load-0 =
 ramp-load-1 =
@@ -105,19 +105,19 @@ ramp-load-2 =
 ramp-load-3 =
 ramp-load-4 =
 ramp-load-5 =
-ramp-load-6 = 
+ramp-load-6 =  
 ramp-load-6-foreground = ${colors.warning}
-ramp-load-7 = 
+ramp-load-7 =  
 ramp-load-7-foreground = ${colors.alert}
 
 [module/eth]
 type = internal/network
 interface = ${local-settings.eth-interface}
 interval = 3.0
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = ${colors.primary}
 label-connected = %local_ip%
-format-disconnected-prefix = " "
+format-disconnected-prefix = "  "
 format-disconnected-prefix-foreground = ${colors.primary}
 format-disconnected =
 
@@ -125,11 +125,11 @@ format-disconnected =
 type = internal/network
 interface = ${local-settings.wlan-interface}
 interval = 3.0
-format-connected = <ramp-signal> <label-connected>
+format-connected = <ramp-signal>  <label-connected>
 format-connected-underline = #9f78e1
 label-connected = %essid%
 label-disconnected = no wifi
-format-disconnected = 來 <label-disconnected>
+format-disconnected = 來  <label-disconnected>
 ramp-signal-0 = 冷
 ramp-signal-1 = 爛
 ramp-signal-2 = 嵐
@@ -139,7 +139,7 @@ ramp-signal-4 = 蠟
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = "  "
 label = %percentage_used%%
 
 [module/battery]
@@ -147,9 +147,9 @@ type = internal/battery
 battery = ${local-settings.battery-id}
 adapter = ${local-settings.adapter-id}
 full-at = 98
-format-full =  100%
-format-charging =  <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-full =   100%
+format-charging =   <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -172,7 +172,7 @@ time-alt = %H:%M:%S
 
 [module/volume]
 type = internal/volume
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume>  <label-volume>
 label-muted =  muted
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -182,7 +182,7 @@ ramp-volume-2 = 
 type = custom/script
 exec = ~/bin/docker-status
 interval = 2
-label =  %output%
+label =   %output%
 
 [module/player]
 type = custom/script
