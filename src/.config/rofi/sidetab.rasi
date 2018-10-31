@@ -12,7 +12,7 @@ configuration {
 }
 
 * {
-	background-color:            #08080855;
+	background-color:            #08080870;
 	text-color:                  #d3d7cf;
 	selbg:                       #215d9c;
 	actbg:                       #262626;

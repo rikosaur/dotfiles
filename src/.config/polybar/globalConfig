@@ -33,7 +33,7 @@ padding-right = 4
 module-margin-left = 4
 module-margin-right = 3
 font-0 = Asap Semibold:style=Semibold:size=10;2
-font-1 = FontAwesome:style=Regular:size=11;3
+font-1 = FontAwesome:style=Regular:size=10;2
 font-2 = Font Awesome 5 Brands:style=Regular:size=10;2
 font-3 = Font Awesome 5 Free:style=Solid:size=10;2
 font-4 = Material Design Icons:style=Regular:size=12;2
@@ -106,9 +106,9 @@ ramp-load-2 =
 ramp-load-3 =
 ramp-load-4 =
 ramp-load-5 =
-ramp-load-6 = 
+ramp-load-6 =  
 ramp-load-6-foreground = ${colors.warning}
-ramp-load-7 = 
+ramp-load-7 =  
 ramp-load-7-foreground = ${colors.alert}
 
 [module/eth]
@@ -150,7 +150,7 @@ adapter = ${local-settings.adapter-id}
 full-at = 98
 format-full =   100%
 format-charging =   <label-charging>
-format-discharging = <ramp-capacity>  <label-discharging>
+format-discharging = <ramp-capacity>   <label-discharging>
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -158,13 +158,13 @@ ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1-foreground = ${colors.warning}
-ramp-capacity-2-foreground = ${colors.primary}
-ramp-capacity-3-foreground = ${colors.primary}
-ramp-capacity-4-foreground = ${colors.primary}
+ramp-capacity-2-foreground = ${colors.foreground}
+ramp-capacity-3-foreground = ${colors.foreground}
+ramp-capacity-4-foreground = ${colors.foreground}
 
 [module/xbacklight]
 type = internal/xbacklight
-format =  <label>
+format =   <label>
 label = %percentage%%
 
 [module/backlight-acpi]
