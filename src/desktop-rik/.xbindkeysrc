@@ -42,7 +42,7 @@
 ""notify-send" 'Weird button says:' 'Do not press me!' --urgency=critical --app-name="
   m:0x0 + c:248
 
-"xbindkeys_show" 
+"xbindkeys_show"
   control+shift + q
 
 # Play/Pause
@@ -65,13 +65,13 @@
 "xterm"
   control + b:2
 
-"pactl set-sink-volume 1 +1000"
+"~/bin/audioctl set-volume +1000"
     XF86AudioRaiseVolume
 
-"pactl set-sink-volume 1 -1000"
+"~/bin/audioctl set-volume -1000"
     XF86AudioLowerVolume
 
-"pactl set-sink-mute 1 toggle"
+"~/bin/audioctl toggle-mute"
     XF86AudioMute
 
 "/usr/local/bin/kb-light.py -"

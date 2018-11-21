@@ -12,6 +12,7 @@ CONFIGURATIONS=(
 	bin/docker-status
 	bin/vlc-stream-status
 	bin/startup
+	bin/audioctl
 	.gtkrc-2.0
 	.vimrc
 	.config/compton.conf

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+COMMAND=$1
+ACTIVE_SINK=$(pacmd list-sinks | awk '/* index:/{print $3}')
+
+if [[ $COMMAND == "set-volume" ]]; then
+  LEVEL_CHANGE=$2
+  pactl set-sink-volume $ACTIVE_SINK $LEVEL_CHANGE
+fi
+
+if [[ $COMMAND == "toggle-mute" ]]; then
+  pactl set-sink-mute $ACTIVE_SINK toggle
+fi
+
+if [[ $COMMAND == "get-device-indicator" ]]; then
+  IS_BLUETOOTH=$(pactl list short sinks | awk '/bluez5(.*)(IDLE|RUNNING)/{print $1}')
+
+  if [[ $IS_BLUETOOTH == $ACTIVE_SINK ]]; then
+    echo ''
+  else
+    echo ''
+  fi
+fi

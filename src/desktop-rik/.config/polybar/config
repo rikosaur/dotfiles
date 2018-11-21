@@ -23,4 +23,4 @@ inherit = global/barconfig
 monitor = HDMI-1
 tray-position = right
 modules-left = i3
-modules-right = player-status volume date
+modules-right = player-status volume audio-source-indicator date
