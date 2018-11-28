@@ -4,6 +4,9 @@
     # Which monitor should the notifications be displayed on.
     monitor = 0
 
+    # Give some eye candy! (only for dunst-git)
+    corner_radius = 5
+
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
     #   keyboard: follow window with keyboard focus
@@ -41,7 +44,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 10
+    transparency = 7
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -123,7 +126,7 @@
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     #   %n  progress value if set without any extra characters
     # Markup is allowed
-    format = "<b>%s</b>\n%b\n%a"
+    format = "<b>%s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -159,7 +162,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_folders = /usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/
 
     ### History ###
 
@@ -239,14 +242,15 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
+    background = "#111111"
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#285577"
+;    background = "#285577"
+    background = "#111111"
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
@@ -267,6 +271,13 @@
 # "background", "new_icon" and "format".
 # Shell-like globbing will get expanded.
 #
+
+[Spotify]
+    appname = "Spotify"
+    background = "#179443"
+    foreground = "#ffffff"
+    format = "<span font="Font Awesome 5 Free"></span>  <b>%s</b>\n%b"
+
 # SCRIPTING
 # You can specify a script that gets run when the rule matches by
 # setting the "script" option.
