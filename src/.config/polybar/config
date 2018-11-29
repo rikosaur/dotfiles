@@ -16,7 +16,7 @@ include-file = /home/rik/.config/polybar/globalConfig
 [bar/main]
 inherit = global/barconfig
 monitor = ${env:MONITOR_PRIMARY:LVDS-1-1}
-modules-right = player-status backlight-acpi battery volume eth wlan date
+modules-right = player-status backlight-acpi battery volume audio-source-indicator eth wlan date
 tray-position = right
 
 ; Secondary bar
