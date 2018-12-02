@@ -15,7 +15,7 @@ info            = #0776aa
 
 
 ; ------------------------
-;  Overal Settings
+;  Overall Settings
 ; ------------------------
 
 [global/barconfig]
@@ -98,7 +98,7 @@ label-urgent-padding = 4
 type = internal/cpu
 interval = 2
 format-prefix = "  "
-format = <label><ramp-load>
+format = <label>  <ramp-load>
 label = %percentage%%
 ramp-load-0 =
 ramp-load-1 =
@@ -106,9 +106,9 @@ ramp-load-2 =
 ramp-load-3 =
 ramp-load-4 =
 ramp-load-5 =
-ramp-load-6 =  
+ramp-load-6 = 
 ramp-load-6-foreground = ${colors.warning}
-ramp-load-7 =  
+ramp-load-7 = 
 ramp-load-7-foreground = ${colors.alert}
 
 [module/eth]
