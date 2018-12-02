@@ -14,7 +14,7 @@ xbindkeys &
 PATH=$PATH:$HOME/bin
 
 # USB automount software
-udiskie --try -aF &
+udiskie --tray -aF &
 
 # Polybar instances
 DISPLAY=:0 MONITOR_PRIMARY=HDMI-3 /usr/bin/polybar main &
