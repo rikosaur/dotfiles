@@ -29,5 +29,6 @@ else
 fi
 
 # Others
+blueman-applet &
 dunst &
 dropbox &
