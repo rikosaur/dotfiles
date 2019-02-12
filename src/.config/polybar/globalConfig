@@ -2,7 +2,7 @@
 ; @author Rik Brugman
 
 [colors]
-background      = #61000000
+background      = #80000000
 background-alt  = #0D3E58
 foreground      = #cfcccccc
 foreground-alt  = #88cccccc
@@ -75,7 +75,8 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.foreground}
+label-focused-foreground = #000
 label-focused-underline = ${colors.primary}
 label-focused-padding = 4
 
@@ -85,7 +86,8 @@ label-unfocused-padding = 4
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${colors.background-alt}
+label-visible-foreground = ${colors.foreground}
+label-visible-background = #50cccccc
 label-visible-underline = ${colors.primary}
 label-visible-padding = 4
 
