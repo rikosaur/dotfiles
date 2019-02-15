@@ -190,7 +190,7 @@ exec --no-startup-id /home/rik/bin/startup
 client.focused		#1b1918 #1b1918 #eee8d5 #ababab
 client.unfocused	#000000 #000000 #ababab #000000
 
-bindsym $mod+l exec i3lock-fancy
+bindsym $mod+l exec i3lock-fancy -b=0x5 -n
 
 focus_follows_mouse no
 mouse_warping none

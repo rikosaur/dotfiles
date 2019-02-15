@@ -7,16 +7,17 @@ These are my dotfiles, used on Arch Linux.
   * i3-gaps
   * xorg-xinit
   * xorg-server
-  * dunst
-  * polybar
+  * dunst-git <sup>aur</sup>
+  * polybar <sup>aur</sup>
   * compton
   * netctl-auto
   * urxvt-unicode
   * vim (with Vundle)
-  * polybar
-  * ttf-hack
   * ttf-ms-fonts
-  * i3lock-fancy
+  * i3lock-fancy-multimonitor-git <sup>aur</sup>
   * i3-dmenu-desktop
   * ttf-roboto
-  * adobe-source-code-pro-fonts
+  * nerd-fonts-source-code-pro <sup>aur</sup>
+  * powerline
+  * rofi
+  
