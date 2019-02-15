@@ -20,6 +20,7 @@ PATH=$PATH:$HOME/bin
 udiskie --tray -aF &
 
 # Polybar instances
+killall -r polybar
 HDMI_STATUS=$(</sys/class/drm/card0/card0-HDMI-A-1/status)
 if [ "connected" == "$HDMI_STATUS" ]; then
 	DISPLAY=:0 MONITOR_PRIMARY=HDMI-0 /usr/bin/polybar main &
