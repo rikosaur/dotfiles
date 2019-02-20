@@ -12,6 +12,7 @@ These are my dotfiles, used on Arch Linux.
   * compton
   * netctl-auto
   * urxvt-unicode
+  * urxvt-perls
   * vim (with Vundle)
   * ttf-ms-fonts <sup>aur</sup>
   * i3lock-fancy-multimonitor-git <sup>aur</sup>
