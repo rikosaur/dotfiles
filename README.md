@@ -22,3 +22,4 @@ These are my dotfiles, used on Arch Linux.
   * rofi
   * adwaita-qt4 <sup>aur</sup>
   * adwaita-qt5 <sup>aur</sup>
+  * exa
