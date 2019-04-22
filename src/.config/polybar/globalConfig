@@ -2,10 +2,10 @@
 ; @author Rik Brugman
 
 [colors]
-background      = #80000000
+background      = #00000000
 background-alt  = #0D3E58
-foreground      = #cfcccccc
-foreground-alt  = #88cccccc
+foreground      = #c1c1c1
+foreground-alt  = #ff808080
 primary         = #ffffff
 secondary       = #00ff00
 success         = #00ae14
@@ -21,28 +21,30 @@ info            = #0776aa
 [global/barconfig]
 enable-ipc    = true
 width         = 100%
-height        = 30
+height        = 35
 offset-x      = 0
 offset-y      = 0
 radius        = 0
 fixed-center  = false
 background = ${colors.background}
 foreground = ${colors.foreground}
-padding-left = 0
-padding-right = 4
+padding-left = 4
+padding-right = 8
 module-margin-left = 4
 module-margin-right = 3
-font-0 = Asap Semibold:style=Semibold:size=10;2
+font-0 = Asap SemiBold:style=Regular:size=10;2
 font-1 = FontAwesome:style=Regular:size=10;2
 font-2 = Font Awesome 5 Brands:style=Regular:size=10;2
 font-3 = Font Awesome 5 Free:style=Solid:size=10;2
 font-4 = Material Design Icons:style=Regular:size=12;2
+font-5 = Asap:style=Bold:size=10;2
 modules-left = i3 filesystem memory cpu docker-status
 modules-center = xwindow
 modules-right =  volume audio-source-indicator eth date
-tray-padding = 2
+tray-offset-x = -10
 tray-transparent = false
-tray-background = #b2000000
+tray-background = ${colors.background}
+line-size = 2
 
 
 ; ------------------------
@@ -57,13 +59,14 @@ label = %title:0:100:...%
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted =   %used% / %total%
+label-mounted = %{F#808080}%{F-}  %used% / %total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
+enable-scroll = false
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
@@ -75,21 +78,22 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.foreground}
-label-focused-foreground = #000
-label-focused-underline = ${colors.primary}
+;label-focused-background = ${colors.foreground}
+label-focused-foreground = ${colors.foreground}
+label-focused-underline = ${colors.foreground}
 label-focused-padding = 4
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
+label-unfocused-foreground = ${colors.foreground-alt}
 label-unfocused-padding = 4
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-foreground = #88000000
+label-visible-foreground = ${colors.foreground-alt}
 ; ${colors.foreground}
-label-visible-background = #50cccccc
-label-visible-underline = ${colors.primary}
+; label-visible-background = #50cccccc
+label-visible-underline = ${colors.foreground-alt}
 label-visible-padding = 4
 
 ; urgent = Workspace with urgency hint set
@@ -101,6 +105,7 @@ label-urgent-padding = 4
 type = internal/cpu
 interval = 2
 format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
 format = <label>  <ramp-load>
 label = %percentage%%
 ramp-load-0 =
@@ -118,9 +123,9 @@ ramp-load-7-foreground = ${colors.alert}
 type = internal/network
 interface = ${local-settings.eth-interface}
 interval = 3.0
-format-connected-prefix = "  "
-format-connected-prefix-foreground = ${colors.foreground}
-label-connected = %local_ip%
+;format-connected-prefix = "  "
+format-connected-foreground = ${colors.foreground-alt}
+label-connected = 
 format-disconnected-prefix = "  "
 format-disconnected-prefix-foreground = ${colors.foreground}
 format-disconnected =
@@ -144,6 +149,7 @@ ramp-signal-4 = 蠟
 type = internal/memory
 interval = 2
 format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage_used%%
 
 [module/battery]
@@ -178,7 +184,7 @@ card = intel_backlight
 [module/date]
 type = internal/date
 interval = 5
-label = %date% %time%
+label = %{T6}%date% %time%%{T-}
 date =
 date-alt = " %Y-%m-%d"
 time = %H:%M
@@ -188,7 +194,7 @@ time-alt = %H:%M:%S
 type = internal/pulseaudio
 use-ui-max = true
 interval = 1
-format-volume = <ramp-volume>  <label-volume>
+format-volume = %{F#808080}<ramp-volume>%{F-}  <label-volume>
 label-muted =  muted
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -204,7 +210,7 @@ label =  %{T5}%output%%{T-}
 type = custom/script
 exec = ~/bin/docker-status
 interval = 2
-label =   %output%
+label = %{F#808080}%{F-}  %output%
 
 [module/player-status]
 type = custom/script

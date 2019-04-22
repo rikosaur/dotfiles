@@ -16,7 +16,8 @@ URxvt.keysym.M-u	       : perl:url-select:select_next
 URxvt.keysym.M-Escape	       : perl:keyboard-select:activate
 URxvt.keysym.M-s	       : perl:keyboard-select:search
 URxvt*transparent              : true
-URxvt*shading                  : 35
+URxvt*shading                  : 60
+! 35
 URxvt*blurRadius               : 10
 
 ! Global Terminal Colors
