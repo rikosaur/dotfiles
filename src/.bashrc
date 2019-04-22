@@ -49,15 +49,3 @@ if type "kubectl" &> /dev/null; then
 	source <(kubectl completion bash)
 fi
 
-if [[ -f "/home/rik/.cdenv/cdenv.sh" ]]; then
-  source "/home/rik/.cdenv/cdenv.sh"
-
-  # Uncomment the following line if you want virtual environments
-  # activated/deactivted as you cd into/out of them.
-  # alias cd="_cdenv_cd"
-
-  # Uncomment the following line if you want to try to check for a
-  # virtual environment in the current directory (and activate it)
-  # whenever a new shell session is created.
-  # cdenv activate
-fi

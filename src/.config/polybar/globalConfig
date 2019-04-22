@@ -159,8 +159,8 @@ type = internal/battery
 battery = ${local-settings.battery-id}
 adapter = ${local-settings.adapter-id}
 full-at = 98
-format-full =   100%
-format-charging =   <label-charging>
+format-full = %{F#808080}%{F-}  100%
+format-charging = %{F#808080}%{F-}  <label-charging>
 format-discharging = <ramp-capacity>   <label-discharging>
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -175,7 +175,9 @@ ramp-capacity-4-foreground = ${colors.foreground-alt}
 
 [module/xbacklight]
 type = internal/xbacklight
-format =   <label>
+format = <label>
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage%%
 
 [module/backlight-acpi]
@@ -197,7 +199,7 @@ type = internal/pulseaudio
 use-ui-max = true
 interval = 1
 format-volume = %{F#808080}<ramp-volume>%{F-}  <label-volume>
-label-muted =  muted
+label-muted = %{F#808080}%{F-} muted
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
