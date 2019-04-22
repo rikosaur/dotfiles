@@ -5,7 +5,7 @@
 ; Will be used in the global bar config file
 [local-settings]
 eth-interface = eno1
-wlan-interface =
+wlan-interface = 
 battery-id =
 adapter-id =
 

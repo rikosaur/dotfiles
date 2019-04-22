@@ -7,7 +7,7 @@ URxvt*scrollBar                : false
 URxvt*internalBorder           : 10
 URxvt*keysym*Shift-Control-V   : perl:clipboard:paste
 URxvt*iso14755                 : false
-URxvt*perl-ext-common          : default,clipboard,url-select,keyboard-select,matcher
+URxvt*perl-ext-common          : default,clipboard,url-select,keyboard-select,matcher,bell-command
 URxvt*matcher*button	       : 1
 URxvt*perl-ext                 : url-select
 URxvt.url-select.launcher      : chromium
@@ -16,9 +16,10 @@ URxvt.keysym.M-u	       : perl:url-select:select_next
 URxvt.keysym.M-Escape	       : perl:keyboard-select:activate
 URxvt.keysym.M-s	       : perl:keyboard-select:search
 URxvt*transparent              : true
-URxvt*shading                  : 60
-! 35
-URxvt*blurRadius               : 10
+URxvt*shading                  : 100
+URxvt*blurRadius               : 20
+URxvt*urgentOnBell	       : true
+URxvt*bell-command	       : echo -n
 
 ! Global Terminal Colors
 ! special

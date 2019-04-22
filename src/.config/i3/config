@@ -194,3 +194,4 @@ bindsym $mod+l exec i3lock-fancy -b=0x5 -n
 
 focus_follows_mouse no
 mouse_warping none
+

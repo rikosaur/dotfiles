@@ -98,7 +98,8 @@ label-visible-padding = 4
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.alert}
+label-urgent-underline = ${colors.alert}
 label-urgent-padding = 4
 
 [module/cpu]
@@ -135,10 +136,11 @@ type = internal/network
 interface = ${local-settings.wlan-interface}
 interval = 3.0
 format-connected = <ramp-signal>  <label-connected>
-format-connected-underline = #9f78e1
+format-connected
 label-connected = %essid%
 label-disconnected = no wifi
 format-disconnected = 來  <label-disconnected>
+ramp-signal-foreground = ${colors.foreground-alt}
 ramp-signal-0 = 冷
 ramp-signal-1 = 爛
 ramp-signal-2 = 嵐
@@ -167,9 +169,9 @@ ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1-foreground = ${colors.warning}
-ramp-capacity-2-foreground = ${colors.foreground}
-ramp-capacity-3-foreground = ${colors.foreground}
-ramp-capacity-4-foreground = ${colors.foreground}
+ramp-capacity-2-foreground = ${colors.foreground-alt}
+ramp-capacity-3-foreground = ${colors.foreground-alt}
+ramp-capacity-4-foreground = ${colors.foreground-alt}
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -216,5 +218,4 @@ label = %{F#808080}%{F-}  %output%
 type = custom/script
 exec = ~/bin/player-status
 interval = 1
-format-prefix = " "
-format = <label>
+label = %output:0:35:...%
