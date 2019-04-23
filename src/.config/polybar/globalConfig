@@ -209,6 +209,7 @@ type = custom/script
 exec = ~/bin/audioctl get-device-indicator
 interval = 1
 label =  %{T5}%output%%{T-}
+label-foreground = ${colors.foreground-alt}
 
 [module/docker-status]
 type = custom/script
