@@ -12,14 +12,15 @@ configuration {
 }
 
 * {
-	background-color:            #08080870;
-	text-color:                  #d3d7cf;
-	selbg:                       #215d9c;
+	background-color:            #1c1d2280;
+	text-color:                  #808080;
+  selected-text-color:         #c1c1c1;
+	selbg:                       #85c405;
 	actbg:                       #262626;
 	urgbg:                       #e53935;
-	winbg:			                 #26c6da;
+	winbg:			                 #c1c1c1;
 
-	selected-normal-foreground:  @winbg;
+	selected-normal-foreground:  @selected-text-color;
 	normal-foreground:           @text-color;
 	selected-normal-background:  @actbg;
 	normal-background:           @background-color;
@@ -40,7 +41,7 @@ configuration {
 	hide-scrollbar:              "true";
 	margin:                      0;
 	padding:                     0;
-	font:                        "Roboto Regular 12";
+	font:                        "Asap 12";
 }
 
 window {
@@ -61,7 +62,7 @@ button { padding: 5px 2px; }
 
 button selected {
 	background-color: @active-background;
-	text-color:       @text-color;
+	text-color:       @actbg;
 }
 
 inputbar {
@@ -79,7 +80,7 @@ element { padding: 15px; }
 
 entry {
 	expand:         false;
-	text-color:     @normal-foreground;
+	text-color:     @selected-text-color;
 	vertical-align: 1;
 	padding:        5px;
 }
