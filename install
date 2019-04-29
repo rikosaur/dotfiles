@@ -24,6 +24,7 @@ CONFIGURATIONS=(
 	.config/gtk-3.0
 	.config/rofi
 	.xinitrc
+	.inputrc
 	.Xresources
 	.xbindkeysrc
 )
