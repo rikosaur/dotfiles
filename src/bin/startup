@@ -12,6 +12,7 @@ feh --bg-fill 'pictures/background.jpg'
 
 # Keyboard
 xbindkeys &
+setxkbmap -option compose:ralt
 
 # append home to path
 PATH=$PATH:$HOME/bin
