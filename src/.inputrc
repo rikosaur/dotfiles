@@ -1,3 +1,6 @@
+# include global system config
+$include /etc/inputrc
+
 # display all possible matches for an ambiguous pattern at first tab
 set show-all-if-ambiguous on
 
