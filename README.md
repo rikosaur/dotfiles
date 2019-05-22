@@ -19,7 +19,7 @@ These are my dotfiles, used on Arch Linux.
   * ttf-roboto
   * nerd-fonts-source-code-pro <sup>aur</sup>
   * powerline
-  * rofi
+  * ulauncher <sup>aur</sup>
   * adwaita-qt4 <sup>aur</sup>
   * adwaita-qt5 <sup>aur</sup>
   * exa

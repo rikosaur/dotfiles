@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Start or reset Polybar
+# Rik Brugman 2019
+
+# Kill Polybar instances (if any)
+
+#PIDS=($(pgrep -f polybar))
+#for PID in "${PIDS[@]}"; do
+#  if [[ $PID != $$ ]]; then
+#    kill "$PID"
+#  fi
+#done
+
+#polybar-msg cmd quit
+
+HDMI_STATUS=$(</sys/class/drm/card0/card0-HDMI-A-1/status)
+PB_ARGS="-c /home/rik/.config/polybar/config"
+#PB_ARGS=""
+
+if [ "connected" == "$HDMI_STATUS" ]; then
+	DISPLAY=:0 MONITOR_PRIMARY=HDMI-0     sudo -E -u rik /usr/bin/polybar $PB_ARGS main &>> /tmp/hdmistats_rik
+	DISPLAY=:0 MONITOR_SECONDARY=LVDS-1-1 sudo -E -u rik /usr/bin/polybar $PB_ARGS secondary &>> /tmp/hdmistats_rik
+else
+	DISPLAY=:0 MONITOR_PRIMARY=LVDS-1-1   sudo -E -u rik /usr/bin/polybar $PB_ARGS main &>> /tmp/hdmistats_rik
+fi

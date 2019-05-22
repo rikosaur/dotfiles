@@ -43,7 +43,7 @@ if [ -f '/home/rik/google-cloud-sdk/path.bash.inc' ]; then source '/home/rik/goo
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/rik/google-cloud-sdk/completion.bash.inc' ]; then source '/home/rik/google-cloud-sdk/completion.bash.inc'; fi
 
-export PATH="$HOME/.symfony/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/.symfony/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/.npm-global/bin:$HOME/.local/bin:$PATH"
 
 if type "kubectl" &> /dev/null; then
 	source <(kubectl completion bash)
