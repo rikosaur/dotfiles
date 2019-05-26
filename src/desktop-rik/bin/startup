@@ -24,4 +24,4 @@ DISPLAY=:0 MONITOR_SECONDARY=HDMI-4 /usr/bin/polybar secondary &
 
 # Others
 dunst &
-dropbox &
+ulauncher &
