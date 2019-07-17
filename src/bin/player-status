@@ -1,13 +1,7 @@
 #!/bin/bash
 
-# no players found. Stop!
-if [ "$(playerctl -l 2>&1)" = "No players were found" ]; then
-  echo ""
-  exit
-fi
-
 # Spotify
-if [ "$(playerctl -p spotify status)" = "Playing" ]; then
+if [ "$(playerctl -p spotify status 2>&1)" = "Playing" ]; then
   title=`exec playerctl -p spotify metadata xesam:title`
   artist=`exec playerctl -p spotify metadata xesam:artist`
   echo "  $title - $artist"
