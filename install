@@ -23,6 +23,7 @@ CONFIGURATIONS=(
 	.config/powerline
 	.config/gtk-3.0
 	.config/rofi
+	.config/fish
 	.xinitrc
 	.inputrc
 	.Xresources
