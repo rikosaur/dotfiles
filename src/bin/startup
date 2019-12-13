@@ -8,7 +8,7 @@ xinput set-prop 17 "libinput Tapping Enabled" 1
 
 # VGA/Graphics
 autorandr --change
-feh --bg-fill 'pictures/background.jpg'
+feh --bg-fill 'pictures/background.png'
 
 # Keyboard
 xbindkeys &
