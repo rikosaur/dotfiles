@@ -4,7 +4,7 @@
 # Rik Brugman 2017
 
 # VGA/Graphics
-xrandr --output HDMI-3 --primary --auto --output HDMI-4 --auto --right-of HDMI-3
+xrandr --output HDMI-0 --primary --auto --output HDMI-1 --auto --left-of HDMI-0
 feh --bg-scale 'pictures/background.jpg'
 
 # Keyboard
