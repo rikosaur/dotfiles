@@ -16,7 +16,7 @@ URxvt.keysym.M-u	       : perl:url-select:select_next
 URxvt.keysym.M-Escape	       : perl:keyboard-select:activate
 URxvt.keysym.M-s	       : perl:keyboard-select:search
 URxvt*transparent              : true
-URxvt*shading                  : 100
+URxvt*shading                  : 60
 URxvt*blurRadius               : 20
 URxvt*urgentOnBell	       : true
 URxvt*bell-command	       : echo -n
