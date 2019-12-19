@@ -20,6 +20,9 @@ PATH=$PATH:$HOME/bin
 # start USB automount software
 udiskie --tray -aF &
 
+# register SSH agent
+eval "$(ssh-agent -s )"
+
 # Polybar instances
 HDMI_STATUS=$(</sys/class/drm/card0/card0-HDMI-A-1/status)
 if [ "connected" == "$HDMI_STATUS" ]; then
