@@ -5,7 +5,10 @@
 
 # VGA/Graphics
 xrandr --output HDMI-0 --primary --auto --output HDMI-1 --auto --left-of HDMI-0
-feh --bg-scale 'pictures/background.jpg'
+feh --bg-scale 'pictures/background.png'
+
+# Connections
+eval "$(ssh-agent -s)"
 
 # Keyboard
 xbindkeys &
