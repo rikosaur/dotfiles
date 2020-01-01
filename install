@@ -6,8 +6,6 @@
 # Files to work with
 CONFIGURATIONS=(
 	pictures/background.jpg
-	.bashrc
-	.bash_profile
 	bin/player-status
 	bin/docker-status
 	bin/vlc-stream-status
@@ -23,7 +21,7 @@ CONFIGURATIONS=(
 	.config/powerline
 	.config/gtk-3.0
 	.config/rofi
-	.config/fish
+	.config/fish/config.fish
 	.xinitrc
 	.inputrc
 	.Xresources

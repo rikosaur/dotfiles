@@ -4,7 +4,7 @@
 # Rik Brugman 2017
 
 # Enable Tap-On-Touch
-xinput set-prop 17 "libinput Tapping Enabled" 1
+xinput set-prop 15 "libinput Tapping Enabled" 1
 
 # VGA/Graphics
 autorandr --change
@@ -21,7 +21,7 @@ PATH=$PATH:$HOME/bin
 udiskie --tray -aF &
 
 # register SSH agent
-eval "$(ssh-agent -s )"
+eval "$(ssh-agent -s)"
 
 # Polybar instances
 HDMI_STATUS=$(</sys/class/drm/card0/card0-HDMI-A-1/status)
