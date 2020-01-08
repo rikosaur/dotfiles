@@ -9,5 +9,6 @@ alias bd='bin/console'
 alias doei='shutdown now'
 
 set -gx PATH $HOME/.yarn/bin $PATH
+set -gx EDITOR vim
 
 source $HOME/google-cloud-sdk/path.fish.inc
