@@ -9,3 +9,5 @@ set mouse=a
 set laststatus=2
 
 filetype plugin indent on
+
+let g:powerline_pycmd = 'py3'

@@ -8,7 +8,8 @@ alias gs='git status'
 alias bd='bin/console'
 alias doei='shutdown now'
 
-set -gx PATH $HOME/.yarn/bin $PATH
+set -gx PATH $HOME/.yarn/bin $HOME/bin $PATH
 set -gx EDITOR vim
 
-source $HOME/google-cloud-sdk/path.fish.inc
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/rik/bin/packages/google-cloud-sdk/path.fish.inc' ]; . '/home/rik/bin/packages/google-cloud-sdk/path.fish.inc'; end
