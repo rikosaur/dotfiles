@@ -39,9 +39,6 @@
 
 # Examples of commands:
 
-""notify-send" 'Weird button says:' 'Do not press me!' --urgency=critical --app-name="
-  m:0x0 + c:248
-
 "xbindkeys_show" 
   control+shift + q
 
@@ -74,10 +71,10 @@
 "pactl set-sink-mute 0 toggle"
     XF86AudioMute
 
-"/usr/local/bin/kb-light.py -"
+"xbacklight -dec 5"
     XF86KbdBrightnessDown
 
-"/usr/local/bin/kb-light.py +"
+"xbacklight -inc 5"
     XF86KbdBrightnessUp
 
 "light -A 5"

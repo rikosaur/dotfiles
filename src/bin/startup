@@ -4,7 +4,8 @@
 # Rik Brugman 2017
 
 # Enable Tap-On-Touch
-xinput set-prop 15 "libinput Tapping Enabled" 1
+TOUCHPAD_DEV_ID=$(xinput list --id-only 'ELAN1300:00 04F3:3087 Touchpad')
+xinput set-prop $TOUCHPAD_DEV_ID "libinput Tapping Enabled" 1
 
 # VGA/Graphics
 autorandr --change
@@ -13,6 +14,7 @@ feh --bg-fill 'pictures/background.png'
 # Keyboard
 xbindkeys &
 setxkbmap -option compose:ralt
+libinput-gestures &
 
 # append home to path
 PATH=$PATH:$HOME/bin
@@ -26,10 +28,10 @@ eval "$(ssh-agent -s)"
 # Polybar instances
 HDMI_STATUS=$(</sys/class/drm/card0/card0-HDMI-A-1/status)
 if [ "connected" == "$HDMI_STATUS" ]; then
-	DISPLAY=:0 MONITOR_PRIMARY=HDMI-0 /usr/bin/polybar main &
-	DISPLAY=:0 MONITOR_SECONDARY=LVDS-1-1 /usr/bin/polybar secondary &
+	DISPLAY=:0 MONITOR_PRIMARY=HDMI1 /usr/bin/polybar main &
+	DISPLAY=:0 MONITOR_SECONDARY=eDP1 /usr/bin/polybar secondary &
 else
-	DISPLAY=:0 MONITOR_PRIMARY=LVDS-1-1 /usr/bin/polybar main &
+	DISPLAY=:0 MONITOR_PRIMARY=eDP1 /usr/bin/polybar main &
 fi
 
 # Others
