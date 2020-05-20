@@ -13,7 +13,7 @@ CONFIGURATIONS=(
 	bin/audioctl
 	.gtkrc-2.0
 	.vimrc
-	.config/compton.conf
+	.config/picom.conf
 	.config/dunst
 	.config/i3
 	.config/polybar/config

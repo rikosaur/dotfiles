@@ -7,10 +7,6 @@
 TOUCHPAD_DEV_ID=$(xinput list --id-only 'ELAN1300:00 04F3:3087 Touchpad')
 xinput set-prop $TOUCHPAD_DEV_ID "libinput Tapping Enabled" 1
 
-# VGA/Graphics
-autorandr --change
-feh --bg-fill 'pictures/background.png'
-
 # Keyboard
 xbindkeys &
 setxkbmap -option compose:ralt
@@ -24,6 +20,10 @@ udiskie --tray -aF &
 
 # register SSH agent
 eval "$(ssh-agent -s)"
+
+# Set display and themes
+autorandr --change
+wal -R
 
 # Polybar instances
 HDMI_STATUS=$(</sys/class/drm/card0/card0-HDMI-A-1/status)

@@ -2,7 +2,7 @@
 ; @author Rik Brugman
 
 [colors]
-background      = #00000000
+background      = #55000000
 background-alt  = #0D3E58
 foreground      = #c1c1c1
 foreground-alt  = #ff808080
@@ -41,7 +41,7 @@ font-5 = Asap:style=Bold:size=10;2
 modules-left = i3 filesystem memory cpu docker-status
 modules-center = xwindow
 modules-right =  volume audio-source-indicator eth date
-tray-offset-x = -10
+tray-offset-x = 0
 tray-transparent = false
 tray-background = ${colors.background}
 line-size = 2
